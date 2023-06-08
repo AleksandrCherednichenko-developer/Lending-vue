@@ -1,0 +1,38 @@
+.scheme__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: calc-rem(20px);
+    max-width: calc-rem(210px);
+
+    @media #{$mMd} {
+        max-width: calc-rem(180px);
+    }
+
+    @media #{$mSm} {
+        flex-direction: row;
+        max-width: fit-content;
+    }
+
+    &-icon {
+        @include size(100px);
+        min-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #3E9CDC;
+        border: 5px solid #286690;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        @media #{$mMd} {
+            @include size(80px);
+            min-width: 80px;
+        }
+    }
+}

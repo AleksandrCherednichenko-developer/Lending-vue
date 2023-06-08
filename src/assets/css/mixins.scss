@@ -1,0 +1,29 @@
+@mixin transit($props, $duration: 0.3s, $delay: 0s) {
+    transition-property: #{$props};
+    transition-duration: $duration;
+    transition-delay: $delay;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin hover($changeActive: false) {
+    @media (hover: hover) {
+        &:hover {
+            @if $changeActive {
+                @content('hover')
+            } @else {
+                @content
+            }
+        }
+    }
+    &:active {
+        @if $changeActive {
+            @content('active')
+        } @else {
+            @content
+        }
+    }
+}

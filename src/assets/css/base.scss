@@ -1,0 +1,40 @@
+@supports (height: 100dvh) {
+    html, body {
+        height: 100dvh;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+}
+
+html, body  {
+    font-family: $ffLato;
+    font-size: var(--rem);
+    font-weight: $fwHeavy;
+    height: 100%;
+    background-color: #272733;
+    color: #FFFFFF;
+}
+
+#app {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex: 1 1 auto;
+}
+
+.content-container {
+    width: 100%;
+    max-width: calc($mwContent + var(--pContent) * 2);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--pContent);
+}

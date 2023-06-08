@@ -1,0 +1,16 @@
+.header{
+    position: fixed;
+    z-index: $z-index-20;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--hHeader);
+    background-color: rgba(#10101D, 0.9);
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+}

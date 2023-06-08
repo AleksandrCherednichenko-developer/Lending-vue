@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: calc-rem(60px);
+
+    &__item {
+        @include transit('color');
+        position: relative;
+        text-transform: uppercase;
+        font-size: calc-rem(13px);
+        font-weight: $fwBold;
+
+        @include hover() {
+            color: #43ABF0;
+
+            &:after{
+                width: 100%;
+            }
+        }
+
+        &:after {
+            @include transit('width');
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background-color: #43ABF0;
+        }
+    }
+}

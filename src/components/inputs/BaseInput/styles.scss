@@ -1,0 +1,30 @@
+.base__input {
+    @include transit('border-color, box-shadow, background-color');
+    //max-width: calc-rem(370px);
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    padding: calc-rem(12px) calc-rem(10px);
+
+    &::placeholder {
+        @include transit('color');
+        color: #272733;
+    }
+
+    &:focus, &:focus-visible{
+        color: #ffffff;
+        background-color: #3D4050;
+        border-color: #3D4050;
+        outline: none;
+        box-shadow: 1px 1px 5px rgba(#3E9CDC, .5);
+
+        &::placeholder{
+            color: #FFFFFF;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.file__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    //max-width: calc-rem(370px);
+    width: 100%;
+    font-weight: var(--fwSemiBold);
+    text-transform: uppercase;
+    color: #272733;
+    background-color: #FFFFFF;
+    border: 2px solid #3E9CDC;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    padding: calc-rem(12px);
+    cursor: pointer;
+
+    &-input {
+        display: none;
+    }
+}

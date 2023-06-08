@@ -1,0 +1,50 @@
+.burger__btn {
+    @include size(30px, 20px);
+    position: relative;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    @include hover {
+        .burger__btn-line{
+            background-color: #3E9CDC;
+        }
+    }
+
+    &-line {
+        @include size(100%, 3px);
+        @include transit('transform, background-color');
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #FFFFFF;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+
+        &:nth-child(2) {
+            top: calc(50% - 1px);
+        }
+
+        &:last-child {
+            top: auto;
+            bottom: 0;
+        }
+    }
+
+    &--active .burger__btn-line {
+        &:first-child {
+            transform: translateY(8.5px) rotate(135deg);
+        }
+
+        &:nth-child(2) {
+            transform: rotateY(90deg);
+        }
+
+        &:last-child {
+            transform: translateY(-8.5px) rotate(-135deg);
+        }
+    }
+}
